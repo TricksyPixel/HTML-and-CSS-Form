@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="uts-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Customise Your Pizza</title>
+      <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+      <h1 id="title">Customise Your Pizza</h1>
+      <p id="description">Please fill out this short form with your details and pizza toppings of your choice and our chefs will work their magic!</p>
+      <form id="survey-form" method="post" action='https://register-demo.freecodecamp.org'>
+        <fieldset>
+          <legend>Personal Details</legend>
+          <label for="name" id="name-label">Name:</label>
+          <input id="name" type="text" placeholder="eg. John Dough" required>
+          <label for="email" id="email-label">Email:</label>
+          <input id="email" type="email" required placeholder="eg. DoughBoy88@email.com">
+          <label for="tel">Phone number:</label>
+          <input id="tel" type="tel" minlength="8" maxlength="10" required>
+          <label for="address">Delivery address:</label>
+          <input id="address" type="text">
+        </fieldset>
+        <fieldset>
+          <legend>Customize Your Pizza</legend>
+          <label for="dropdown">Crust:</label>
+          <select id="dropdown">
+            <option value="thin">Thin n' Crispy</option>
+            <option value="thick">Thick n' Chonky</option>
+          </select>
+          <legend class="sauce-section">Choose your sauce:</legend>
+          <label for="sauce"><input id="sauce" type="radio" name="sauce-type" value="tomato" class="inline" checked>Tomato</label>
+          <label for="sauce"><input id="sauce" type="radio" name="sauce-type" value="bbq" class="inline">BBQ</label>
+
+          <legend class="topping-section">Choose your toppings:</legend>
+          <label for="topping1"><input type="checkbox" class="inline" id="topping1" value="pineapple" required>Pineapple</label>
+          <label for="topping2"><input type="checkbox" class="inline" id="topping2" value="ham">Ham</label>
+          <label for="topping3"><input type="checkbox" class="inline" id="topping3" value="mozzarella-cheese">Mozzarella Cheese</label>
+
+          <label for="number" id="number-label">Quantity:</label>
+          <input id="number" type="number" class min="1" max="5" placeholder="0">
+
+          <label for="comment">(Optional) Additional comments for the chef:
+          <textarea id="comment" name="comment" rows="3" cols="30" placeholder="(eg. Your pizzas are the bomb!)"></textarea>
+        </label>
+        </fieldset>
+        <input id="submit" type="submit" value="Submit">
+      </form>
+    </body>
+  </html>
